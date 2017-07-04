@@ -1,0 +1,40 @@
+* {
+    font-family: 'Lobster', cursive;
+}
+
+img {
+    border-radius: 10px;
+}
+
+.click-counter {
+    font-size: 30px;
+    color: red;
+    padding: 10px;
+
+}
+
+.container {
+    max-width: 800px;
+}
+
+h2 {
+   position: absolute;
+   top: 150px;
+   left: 20;
+   width: 100%;
+   text-shadow: 0 0 5px #ffffff;
+}
+
+#navbar {
+    list-style-type: none;
+}
+
+li {
+    display: inline;
+    padding: 10px;
+
+}
+
+li:hover {
+  background-color: yellow;
+}
