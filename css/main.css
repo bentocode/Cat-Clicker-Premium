@@ -38,3 +38,7 @@ li {
 li:hover {
   background-color: yellow;
 }
+
+.target-photo1 {
+  display: none;
+}

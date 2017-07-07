@@ -27,23 +27,28 @@ var cats =  {
 
 $(function() {
 
-// Create navbar from cats object
+    // Iterate through cats object and create a div forEach cat. Set display = none by default
     cats.cats.forEach(function(cat) {
+
+    // Create navbar from cats object
         $("#navbar").append('<li>' + cat.catName + '</li>');
+        // Create a div for each cat
+        var catDiv = '<picture class="target-photo1"><img src="%data%"></picture>';
+        var displayedName = '<h2 class="cat-name-1">%data%</h2>';
+        var formattedCatDiv = catDiv.replace("%data%", cat.catImage);
+        var formattedDisplayedName = displayedName.replace("%data%", cat.catName);
+        $(".displayColumn").append(formattedCatDiv);
+        $(".target-photo1:last").append(formattedDisplayedName);
+
     });
 
-// function changeImg(image){
-//   var imghol = document.getElementByClass("target-photo1");
-//   imghol.src = image;
-// }
-
-// onClick of navbar to select initial cat picture and cat name to display
-    $("li").click(function(){
-        $("#cat-name-1").append(catList[0]);
-        var catPic = '<img src="%data%" alt="Picture of a cat trying to shake your hand">';
-        var formattedImage = catPic.replace("%data%", "images/"+catList[0]+".jpg");
-        $("picture").append(formattedImage);
-    });
+// // onClick of navbar to select cat picture and cat name to display
+//     $("li").click(function(){
+//         $("#cat-name-1").append(catList[0]);
+//         var catPic = '<img src="%data%" alt="Picture of a cat trying to shake your hand">';
+//         var formattedImage = catPic.replace("%data%", "images/"+catList[0]+".jpg");
+//         $("picture").append(formattedImage);
+//     });
 });
 
 // // Check for click event on target photo. Increment count and display new count.
